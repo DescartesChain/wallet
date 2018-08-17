@@ -8,6 +8,7 @@ module.exports = function(config) {
     basePath: '',
 
     // frameworks to use
+    // jasmine & sinon
     frameworks: ['jasmine', 'sinon'],
 
     preprocessors: {
