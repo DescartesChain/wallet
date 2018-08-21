@@ -66,4 +66,11 @@ function runTasks(children) {
     pair[0].send(pair[1])
   })
 }
-
+function collectTasks() {
+  var tasks = fs.readdirSync('./app/lib/i18n/translations').map(function(f){
+    return f.replace('.json', '')
+  }).map(function(language) {
+    process.env.LANGUAGE = language
+    var scripts = cp.fork('./tasks', {env: process.env})
+    return [scripts, ['scripts', 'loaderNope']]
+  })
