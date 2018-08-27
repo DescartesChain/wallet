@@ -20,6 +20,8 @@ window.initHiveApp = function() {
   fastclick(document.body)
 
   initGeoOverlay(document.getElementById('geo-overlay'))
+  
+  //todo
 
   walletExists(function(exists){
     auth = exists ? initAuth.pin(null, { userExists: true }) : initAuth.choose()
