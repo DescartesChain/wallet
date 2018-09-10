@@ -21,7 +21,7 @@ window.initHiveApp = function() {
 
   initGeoOverlay(document.getElementById('geo-overlay'))
   
-  //todo
+  //todo  
 
   walletExists(function(exists){
     auth = exists ? initAuth.pin(null, { userExists: true }) : initAuth.choose()
